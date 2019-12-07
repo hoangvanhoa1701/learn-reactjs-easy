@@ -1,27 +1,32 @@
 {
-  "name": "learn-reactjs-easy",
-  "version": "1.0.0",
-  "description": "Learn ReactJS So Easy With Nova",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hoangvanhoa1701/learn-reactjs-easy.git"
-  },
-  "keywords": [
-    "learn-reactjs-easy"
-  ],
-  "author": "Hoang Hoa - by Nova",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hoangvanhoa1701/learn-reactjs-easy/issues"
-  },
-  "homepage": "https://github.com/hoangvanhoa1701/learn-reactjs-easy#readme",
-  "dependencies": {
-    "react": "^16.12.0",
-    "webpack": "^4.41.2",
-    "webpack-dev-server": "^3.9.0"
-  }
+    "name": "learn-reactjs-easy",
+    "version": "1.0.0",
+    "description": "Learn ReactJS So Easy With Nova",
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack-dev-server --hot"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hoangvanhoa1701/learn-reactjs-easy.git"
+    },
+    "keywords": [
+        "learn-reactjs-easy"
+    ],
+    "author": "Hoang Hoa - by Nova",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hoangvanhoa1701/learn-reactjs-easy/issues"
+    },
+    "homepage": "https://github.com/hoangvanhoa1701/learn-reactjs-easy#readme",
+    "dependencies": {
+        "babel-core": "^6.26.3",
+        "babel-loader": "^8.0.6",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-react": "^6.24.1",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "webpack": "^4.41.2",
+        "webpack-dev-server": "^3.9.0"
+    }
 }
