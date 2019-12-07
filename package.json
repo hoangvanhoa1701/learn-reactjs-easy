@@ -1,0 +1,27 @@
+{
+  "name": "learn-reactjs-easy",
+  "version": "1.0.0",
+  "description": "Learn ReactJS So Easy With Nova",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoangvanhoa1701/learn-reactjs-easy.git"
+  },
+  "keywords": [
+    "learn-reactjs-easy"
+  ],
+  "author": "Hoang Hoa - by Nova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoangvanhoa1701/learn-reactjs-easy/issues"
+  },
+  "homepage": "https://github.com/hoangvanhoa1701/learn-reactjs-easy#readme",
+  "dependencies": {
+    "react": "^16.12.0",
+    "webpack": "^4.41.2",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
