@@ -1,5 +1,11 @@
 import React from 'react';
 import ReactDOM from "react-dom";
+import {ChangeBackgroundEx} from './components/ChangeBackgroundEx';
+import {ForceUpdate} from './components/ForceUpdate';
+import {FindDomNode} from './components/FindDomNode';
+import {ComponentLifeCycle2} from './components/ComponentLifeCycle2';
+import {FormsSimpleExample} from './components/FormsSimpleExample';
+import {FormsComplexExample} from './components/FormsComplexExample';
 import './App.css';
 
 export default class App extends React.Component {
@@ -14,9 +20,38 @@ export default class App extends React.Component {
         <h2 className="BorderTop">Click Change</h2>
         <ClickChange />
 
+        <h2 className="BorderTop">Click Change Image</h2>
+        <ClickChange2 />
+
         <h2 className="BorderTop">State and Props Example</h2>
         <StatefulExample />
 
+        <h2 className="BorderTop">Set State</h2>
+        <SetState/>
+
+        <h2 className="BorderTop">Change Backgroud</h2>
+        <ChangeBackgroud/>
+
+        <h2 className="BorderTop">Change Backgroud Export</h2>
+        <ChangeBackgroundEx/>
+
+        <h2 className="BorderTop">Force Update</h2>
+        <ForceUpdate/>
+
+        <h2 className="BorderTop">Find Dom Node</h2>
+        <FindDomNode/>
+
+        <h2 className="BorderTop">Component Life Cycle</h2>
+        <ComponentLifeCycle2/>
+
+        <h2 className="BorderTop">Forms Simple Example</h2>
+        <FormsSimpleExample/>
+
+        <h2 className="BorderTop">Forms Complex Example</h2>
+        <FormsComplexExample/>
+
+        <h2 className="BorderTop">Forms Simple Example</h2>
+        <FormsSimpleExample/>
         {/* <h2 className="BorderTop">Props Validation</h2>
         <PropsValidation /> */}
       </div>
@@ -48,7 +83,31 @@ class ClickChange extends React.Component {
     )
   }
 }
+class ClickChange2 extends React.Component {
 
+  constructor() {
+    super();
+    this.state = {
+      message: require('./img/test.jpg')
+    };
+    this.updateMessage = this.updateMessage.bind(this);
+  }
+  updateMessage() {
+    this.setState({
+      message: require('./img/test2.jpg')
+    });
+  }
+  render() {
+    return (
+      <div>
+        <h3>Hello {this.state.message}!</h3>
+        <img src={this.state.message} alt="" className="img-400-400"/>
+        <button onClick={this.updateMessage}>Show!</button>
+      </div>
+
+    )
+  }
+}
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
@@ -149,6 +208,62 @@ class TableRow extends React.Component {
     );
   }
 }
+
+class SetState extends React.Component {
+  constructor() {
+     super();
+   
+     this.state = {
+        data: []
+     }
+ 
+     this.setStateHandler = this.setStateHandler.bind(this);
+  };
+  setStateHandler() {
+     var item = "setState..."
+     var myArray = this.state.data.slice();
+   myArray.push(item);
+     this.setState({data: myArray})
+  };
+  render() {
+     return (
+        <div>
+           <button onClick = {this.setStateHandler}>SET STATE</button>
+           <h4>State Array: {this.state.data}</h4>
+        </div>
+     );
+  }
+}
+
+const green = '#39D1B4';
+const yellow = '#FFD712';
+
+class ChangeBackgroud extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = { color: green };
+    this.changeColor = this.changeColor.bind(this);
+  }
+  
+  changeColor() {
+    const newColor = this.state.color === green ? yellow : green;
+    this.setState({ color: newColor });
+  }
+  
+  render() {
+    return (
+      <div style={{background: this.state.color}}>
+        <h3>
+          Change my color
+        </h3>
+        <button onClick={this.changeColor}>
+  				Change color
+				</button>
+      </div>
+    );
+  }
+}
+
 
 // class PropsValidation extends React.Component {
 //   render() {
