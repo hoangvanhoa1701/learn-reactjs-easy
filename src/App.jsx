@@ -6,6 +6,12 @@ import {FindDomNode} from './components/FindDomNode';
 import {ComponentLifeCycle2} from './components/ComponentLifeCycle2';
 import {FormsSimpleExample} from './components/FormsSimpleExample';
 import {FormsComplexExample} from './components/FormsComplexExample';
+import {EventsSimpleExample} from './components/EventsSimpleExample';
+import {EventsChildEvents} from './components/EventsChildEvents';
+import {ClickChangeImage} from './components/ClickChangeImage';
+import {RefsUsingRefs} from './components/RefsUsingRefs';
+import {KeysUsingKeys} from './components/KeysUsingKeys';
+// import {RouterLearn} from './components/RouterLearn';
 import './App.css';
 
 export default class App extends React.Component {
@@ -22,6 +28,9 @@ export default class App extends React.Component {
 
         <h2 className="BorderTop">Click Change Image</h2>
         <ClickChange2 />
+
+        <h2 className="BorderTop">Click Change Image</h2>
+        <ClickChangeImage/>
 
         <h2 className="BorderTop">State and Props Example</h2>
         <StatefulExample />
@@ -50,8 +59,19 @@ export default class App extends React.Component {
         <h2 className="BorderTop">Forms Complex Example</h2>
         <FormsComplexExample/>
 
-        <h2 className="BorderTop">Forms Simple Example</h2>
-        <FormsSimpleExample/>
+        <h2 className="BorderTop">Events</h2>
+        <EventsSimpleExample/>
+
+        <h2 className="BorderTop">Events Child Events</h2>
+        <EventsChildEvents/>
+
+        <h2 className="BorderTop">Refs Using Refs</h2>
+        <RefsUsingRefs/>
+
+        <h2 className="BorderTop">Keys Using Keys</h2>
+        <KeysUsingKeys/>
+        
+        {/* <RouterLearn/> */}
         {/* <h2 className="BorderTop">Props Validation</h2>
         <PropsValidation /> */}
       </div>
@@ -101,7 +121,9 @@ class ClickChange2 extends React.Component {
     return (
       <div>
         <h3>Hello {this.state.message}!</h3>
-        <img src={this.state.message} alt="" className="img-400-400"/>
+        <div className="img-400-400">
+          <img src={this.state.message} alt="" className="img-small"/>
+        </div>
         <button onClick={this.updateMessage}>Show!</button>
       </div>
 
