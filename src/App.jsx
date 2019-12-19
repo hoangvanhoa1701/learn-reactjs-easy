@@ -11,7 +11,7 @@ import {EventsChildEvents} from './components/EventsChildEvents';
 import {ClickChangeImage} from './components/ClickChangeImage';
 import {RefsUsingRefs} from './components/RefsUsingRefs';
 import {KeysUsingKeys} from './components/KeysUsingKeys';
-// import {RouterLearn} from './components/RouterLearn';
+import {RouterLearn2} from './components/RouterLearn2';
 import './App.css';
 
 export default class App extends React.Component {
@@ -71,7 +71,8 @@ export default class App extends React.Component {
         <h2 className="BorderTop">Keys Using Keys</h2>
         <KeysUsingKeys/>
         
-        {/* <RouterLearn/> */}
+        <h2 className="BorderTop">Router Learn</h2>
+        <RouterLearn2/>
         {/* <h2 className="BorderTop">Props Validation</h2>
         <PropsValidation /> */}
       </div>
