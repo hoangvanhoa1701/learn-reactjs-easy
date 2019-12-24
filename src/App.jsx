@@ -12,6 +12,9 @@ import {ClickChangeImage} from './components/ClickChangeImage';
 import {RefsUsingRefs} from './components/RefsUsingRefs';
 import {KeysUsingKeys} from './components/KeysUsingKeys';
 import {RouterLearn2} from './components/RouterLearn2';
+import {Animations} from './components/Animations';
+import {Animations2} from './components/Animations2';
+import {Animations3} from './components/Animations3';
 import './App.css';
 
 export default class App extends React.Component {
@@ -73,6 +76,15 @@ export default class App extends React.Component {
         
         <h2 className="BorderTop">Router Learn</h2>
         <RouterLearn2/>
+
+        <h2 className="BorderTop">Animations</h2>
+        <Animations />
+
+        <h2 className="BorderTop">Animations 2</h2>
+        <Animations2 />
+
+        <h2 className="BorderTop">Animations 3</h2>
+        <Animations3 />
         {/* <h2 className="BorderTop">Props Validation</h2>
         <PropsValidation /> */}
       </div>
